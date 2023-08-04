@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const {nanoid} = require('nanoid');
 
-const contactPath = path.join(__dirname, "contacts.json");
+const contactPath = path.join(__dirname, "./db/contacts.json");
 
 async function listContacts() {
     const allContacts = await fs.readFile(contactPath)
