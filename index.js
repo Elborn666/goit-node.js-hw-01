@@ -1,4 +1,4 @@
-const contacts = require('./db/contacts')
+const contacts = require('./contacts')
 const yargs = require('yargs');
 const {hideBin} = require('yargs/helpers');
 
