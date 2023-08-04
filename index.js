@@ -26,11 +26,6 @@ async function invokeAction({ action, id, name, email, phone }) {
         console.warn('\x1B[31m Unknown action type!');
     }
   }
-  
-  // invokeAction({action: 'list'});
-  // invokeAction({action: 'get', id: '05olLMgyVQdWRwgKfg5J6'});
-  // invokeAction({action: 'add', name: 'Mango', email: 'mango@gmail.com', phone: '322-22-22'});
-  // invokeAction({action: 'remove', id: 'qdggE76Jtbfd9eWJHrssH'});
 
   const arr = hideBin(process.argv);
   const {argv} = yargs(arr);
