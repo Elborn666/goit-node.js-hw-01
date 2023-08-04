@@ -1,5 +1,6 @@
 const contacts = require('./db/contacts')
-const argv = require('yargs').argv;
+const yargs = require('yargs');
+const {hideBin} = require('yargs/helpers');
 
 console.log(contacts)
 
@@ -30,3 +31,7 @@ async function invokeAction({ action, id, name, email, phone }) {
   // invokeAction({action: 'get', id: '05olLMgyVQdWRwgKfg5J6'});
   // invokeAction({action: 'add', name: 'Mango', email: 'mango@gmail.com', phone: '322-22-22'});
   // invokeAction({action: 'remove', id: 'qdggE76Jtbfd9eWJHrssH'});
+
+  const arr = hideBin(process.argv);
+  const {argv} = yargs(arr);
+  invokeAction(argv);
